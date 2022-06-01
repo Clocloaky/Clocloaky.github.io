@@ -1,0 +1,380 @@
+$primary-color: #2155CD;
+$secondary-color: #0AA1DD;
+$text-color: white;
+$button-color: #79DAE8;
+
+$breakpoints: (
+    "xs": 0,
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px,
+);
+
+
+.about {
+    padding: 100px 100px;
+    position: relative;
+
+    @media (max-width: map-get($breakpoints, "md")) {
+        padding: 100px 50px;
+    }
+
+    h1 {
+        position: relative;
+        padding-bottom: 20px;
+        font-weight: bolder;
+    }
+
+    img {
+
+        height: auto;
+        display: block;
+        object-fit: cover;
+        max-width: 100%;
+        border-radius: 10%;
+        padding: 10px;
+        margin-top: 30px;
+    }
+
+}
+
+
+
+.btn-main {
+    background-color: $secondary-color  !important;
+    border-color: $secondary-color  !important;
+    color: $text-color  !important;
+    font-weight: bold !important;
+
+    &:hover {
+        background-color: $button-color  !important;
+        color: $text-color  !important;
+        font-weight: bold !important;
+    }
+}
+
+.carousel-caption {
+    background: rgba(54, 54, 54, 0.7);
+    display: flex;
+    align-items: center;
+
+
+    height: 30%;
+    width: 100%;
+    max-width: 100%;
+
+    left: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+    bottom: initial;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.carousel-inner {
+    img {
+        object-fit: cover;
+    }
+}
+
+.news {
+    padding: 100px 100px;
+    position: relative;
+    min-height: 500px;
+
+    @media (max-width: map-get($breakpoints, "md")) {
+        padding: 100px 50px;
+    }
+
+    h1 {
+        position: relative;
+        padding-bottom: 100px;
+        font-weight: bolder;
+    }
+
+}
+
+.contact {
+    padding: 100px 200px;
+    position: relative;
+    min-height: 500px;
+    background-color: $primary-color;
+    color: $text-color;
+    font-weight: bolder;
+    font-size: large;
+
+    @media (max-width: map-get($breakpoints, "lg")) {
+        padding: 100px 50px;
+    }
+
+    .contact-form {
+        padding-right: 100px;
+
+        @media (max-width: map-get($breakpoints, "lg")) {
+            min-width: 500px;
+        }
+    }
+
+    .contact-info {
+        .row {
+            padding: 50px 0px 50px 10px;
+        }
+
+    }
+
+    .contact-label {
+        color: $primary-color;
+    }
+
+    h1 {
+        position: relative;
+        padding-bottom: 20px;
+        font-weight: bolder;
+    }
+
+    h2 {
+        padding-bottom: 50px;
+        font-size: medium;
+    }
+
+}
+
+.facts {
+    padding: 50px 100px;
+    background-color: $primary-color;
+    color: $text-color;
+
+    h3 {
+        font-size: medium;
+    }
+
+    p {
+        font-size: xx-large;
+        font-weight: bolder;
+    }
+}
+
+.footer {
+    background-color: $secondary-color;
+    color: $text-color;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: $secondary-color;
+
+    a {
+        color: $text-color;
+        font-weight: bolder;
+    }
+
+    li {
+        padding: 0px 20px;
+
+        &:hover {
+            background-color: $button-color;
+        }
+    }
+
+    .navbar-toggler {
+        background-color: $button-color;
+
+        &:focus {
+
+            box-shadow: #E8F9FD;
+            color: #E8F9FD;
+        }
+
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
+}
+
+.event {
+    padding: 50px 200px;
+    position: relative;
+    background-color: $secondary-color;
+
+    @media (max-width: map-get($breakpoints, "lg")) {
+        padding: 50px 50px;
+    }
+
+    h1 {
+        position: relative;
+        padding-bottom: 50px;
+        color: $text-color;
+        font-weight: bolder;
+    }
+
+    table {
+        background-color: white;
+        border-style: none;
+        color: white;
+    }
+
+    th {
+        color: black;
+    }
+
+    .table-responsive {
+        min-height: 300px;
+        min-width: 300px;
+    }
+
+    .table-striped>tbody>tr:nth-child(odd)>td,
+    .table-striped>tbody>tr:nth-child(odd)>th {
+        background-color: $button-color;
+        border: none;
+    }
+
+    .table-striped>tbody>tr:nth-child(even)>td,
+    .table-striped>tbody>tr:nth-child(even)>th {
+        border: none;
+        color: black;
+    }
+
+}
+
+.owner {
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url("/images/owner-bg.jpg");
+    padding: 100px 200px;
+
+    .image-container {
+        background: rgba(238, 238, 238, 0.7);
+        display: block;
+        align-items: center;
+        padding: 30px;
+    }
+
+    img {
+        border-radius: 50%;
+        max-width: 200px;
+    }
+}
+
+.employees {
+    h2 {
+        padding: 50px;
+        font-weight: bold;
+    }
+
+    h4 {
+        font-size: small;
+        font-weight: lighter;
+    }
+
+    img {
+        padding: 10px;
+        border-radius: 50%;
+        max-width: 200px;
+    }
+
+    p {
+        padding: 10px 30px;
+    }
+
+    .striped {
+        background-color: $secondary-color;
+        color: $text-color;
+    }
+}
+
+.events {
+    padding: 50px 200px;
+    min-width: 500px;
+
+    @media (max-width: map-get($breakpoints, "lg")) {
+        padding: 50px 100px;
+    }
+
+    #filter-head {
+        margin: auto;
+        padding: 10px;
+    }
+
+    h1 {
+        position: relative;
+        padding-bottom: 50px;
+        font-weight: bolder;
+    }
+
+    h2 {
+        font-size: medium;
+    }
+
+    .header {
+        position: sticky;
+        top: 0;
+        background-color: white;
+    }
+
+    .event-desc {
+        padding-bottom: 50px;
+
+        h1 {
+            padding: 0px;
+        }
+
+        .row {
+            padding-bottom: 10px;
+        }
+    }
+
+    #event-desc-btn{
+        display:none;
+    }
+
+    #eventBlock {
+        display: none;
+    }
+
+    .event-filter {
+        padding: 20px 100px 0px 100px;
+        background-color: $primary-color;
+        color: $text-color;
+
+        @media (max-width: map-get($breakpoints, "lg")) {
+            padding: 50px 50px;
+        }
+    }
+
+    table {
+        margin: auto;
+    }
+
+    .table-size {
+        max-height: 500px;
+        overflow: scroll;
+    }
+}
+
+.subscription-image {
+    background-attachment: local;
+    background-size: cover;
+    background-image: url("/images/newsletter-bg.png");
+    min-height: 300px;
+    .container-fluid {
+        padding: 0px 100px;
+
+        @media (max-width: map-get($breakpoints, "md")) {
+            padding: 0px 50px;
+        }
+    }
+
+    h2 {
+        color: $text-color;
+    }
+
+    .image-container {
+        background: rgba(50, 50, 50, 0.5);
+        min-height: 300px;
+        display: block;
+        align-items: center;
+    }
+}

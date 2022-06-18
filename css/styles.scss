@@ -4,7 +4,7 @@ $text-color: white;
 $button-color: #79DAE8;
 
 $breakpoints: (
-    "xs": 0,
+    "xs": 380px,
     "sm": 576px,
     "md": 768px,
     "lg": 992px,
@@ -33,8 +33,11 @@ $breakpoints: (
         object-fit: cover;
         max-width: 100%;
         border-radius: 10%;
-        padding: 10px;
         margin-top: 30px;
+
+        @media (max-width: map-get($breakpoints, "xs")) {
+            padding: 0px;
+        }
     }
 
 }
@@ -72,6 +75,10 @@ $breakpoints: (
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
+
+    h1 {
+        padding: 20px;
+    }
 }
 
 .carousel-inner {
@@ -97,6 +104,32 @@ $breakpoints: (
 
 }
 
+.news-header {
+    background-color: $primary-color;
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        padding: 50px 0px;
+        color: $text-color;
+    }
+}
+
+.news-page {
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url("/images/blurred-bg.jpg");
+    padding: 100px 100px;
+
+    @media (max-width: map-get($breakpoints, "md")) {
+        padding: 50px 0px;
+    }
+
+    .card {
+        margin-bottom: 50px;
+    }
+}
+
 .contact {
     padding: 100px 200px;
     position: relative;
@@ -107,22 +140,24 @@ $breakpoints: (
     font-size: large;
 
     @media (max-width: map-get($breakpoints, "lg")) {
-        padding: 100px 50px;
+        padding: 100px 20px;
+        font-weight: lighter;
     }
 
     .contact-form {
         padding-right: 100px;
 
-        @media (max-width: map-get($breakpoints, "lg")) {
-            min-width: 500px;
+        @media (max-width: map-get($breakpoints, "md")) {
+            padding-right: 0px;
         }
     }
 
     .contact-info {
-        .row {
-            padding: 50px 0px 50px 10px;
-        }
+        padding-left: 50px;
 
+        @media (max-width: map-get($breakpoints, "md")) {
+            padding-left: 0px;
+        }
     }
 
     .contact-label {
@@ -140,6 +175,20 @@ $breakpoints: (
         font-size: medium;
     }
 
+    p {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .contact-border {
+        border-right-style: solid;
+        border-width: medium;
+
+        @media (max-width: map-get($breakpoints, "md")) {
+            border-right-style: none;
+        }
+    }
+
 }
 
 .facts {
@@ -154,6 +203,15 @@ $breakpoints: (
     p {
         font-size: xx-large;
         font-weight: bolder;
+    }
+
+    .fact-border {
+        border-right-style: solid;
+        border-width: medium;
+
+        @media (max-width: map-get($breakpoints, "md")) {
+            border-right-style: none;
+        }
     }
 }
 
@@ -222,7 +280,7 @@ $breakpoints: (
 
     .table-responsive {
         min-height: 300px;
-        min-width: 300px;
+
     }
 
     .table-striped>tbody>tr:nth-child(odd)>td,
@@ -245,11 +303,20 @@ $breakpoints: (
     background-image: url("/images/owner-bg.jpg");
     padding: 100px 200px;
 
+    @media (max-width: map-get($breakpoints, "sm")) {
+        padding: 10px 10px;
+    }
+
     .image-container {
         background: rgba(238, 238, 238, 0.7);
         display: block;
         align-items: center;
         padding: 30px;
+
+        @media (max-width: map-get($breakpoints, "sm")) {
+            padding: 20px;
+            display: block;
+        }
     }
 
     img {
@@ -277,6 +344,8 @@ $breakpoints: (
 
     p {
         padding: 10px 30px;
+        text-align: justify;
+        text-justify: inter-word;
     }
 
     .striped {
@@ -287,10 +356,14 @@ $breakpoints: (
 
 .events {
     padding: 50px 200px;
-    min-width: 500px;
+    min-width: 100%;
 
     @media (max-width: map-get($breakpoints, "lg")) {
         padding: 50px 100px;
+    }
+
+    @media (max-width: map-get($breakpoints, "md")) {
+        padding: 100px 0px;
     }
 
     #filter-head {
@@ -326,8 +399,8 @@ $breakpoints: (
         }
     }
 
-    #event-desc-btn{
-        display:none;
+    #event-desc-btn {
+        display: none;
     }
 
     #eventBlock {
@@ -359,6 +432,7 @@ $breakpoints: (
     background-size: cover;
     background-image: url("/images/newsletter-bg.png");
     min-height: 300px;
+
     .container-fluid {
         padding: 0px 100px;
 

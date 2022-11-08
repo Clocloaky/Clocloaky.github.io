@@ -15,9 +15,9 @@
                 d="M455.6 349.2c-45.891-39.09-36.67-77.877-16.095-128.11C475.16 134.04 415.967 34.14 329.93 8.3C237.04-19.6 134.252 24.341 99.677 117.147a180.862 180.862 0 0 0-10.988 73.544c1.733 29.543 14.717 52.97 24.09 80.3c17.2 50.161-28.1 92.743-66.662 117.582c-46.806 30.2-36.319 39.857-8.428 41.858c23.378 1.68 44.478-4.548 65.265-15.045c9.2-4.647 40.687-18.931 45.13-28.588c-12.184 26.59-36.962 72.702-21.463 102.102c19.1 36.229 67.112-31.77 76.709-45.812c8.591-12.572 42.963-81.279 63.627-46.926c18.865 31.361 8.6 76.391 35.738 104.622c32.854 34.2 51.155-18.312 51.412-44.221c.163-16.411-6.1-95.852 29.9-59.944c21.421 21.381 52.905 71.181 88.561 67.023c38.736-4.516-22.123-67.967-28.262-78.695c5.393 4.279 53.665 34.128 53.818 9.52c.11-18.789-30.085-34.667-42.524-45.267Z" />
         </svg>
         <a href="#home" class="">Home</a>
-        <a href="#" class="">Portfolio</a>
-        <a href="#" class="">Skills</a>
-        <a href="#" class="">Contact</a>
+        <a href="#about" class="">Portfolio</a>
+        <a href="#skills" class="">Skills</a>
+        <a href="#contact" class="">Contact</a>
     </nav>
     <main id="home">
         <div class="bg-stone-100 h-[90vh]">
@@ -25,7 +25,7 @@
                 alt="">
             <div class="h-full w-full transform -translate-y-full flex flex-col justify-center items-center">
                 <img class="h-[200px] rounded-full" src="/images/aboutimage.jpg" alt="">
-                <h1 class="text-5xl font-extrabold text-slate-70 pb-2">Hello, my name is Irene :)!</h1>
+                <h1 class="text-5xl font-bold text-slate-70 pb-2">Hello, my name is Irene :)!</h1>
                 <p class="text-slate-70 text-3xl">San Francisco State University</p>
                 <p class="text-slate-70 text-3xl">Bachelors of Science in Business Administration</p>
                 <div class="text-3xl">
@@ -47,8 +47,8 @@
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Rocksdale Cafe Website</div>
                     <p class="text-gray-700 text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
-                        perferendis eaque, exercitationem praesentium nihil.
+                        Board game themed cafe in Maryland website made with: React and Tailwind CSS.
+                        Uses: Router, Pagination, UseContext, UseMemo
                     </p>
                 </div>
                 <div class="flex justify-center w-full gap-5">
@@ -63,8 +63,8 @@
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Magical Girl Simulator App</div>
                     <p class="text-gray-700 text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
-                        perferendis eaque, exercitationem praesentium nihil.
+                        This project is a game app I designed for an app making contest at SFSU. I won first place for the project idea. 
+                        Future: Transfer as react native app.
                     </p>
                 </div>
                 <div class="flex justify-center w-full gap-5">
@@ -91,7 +91,7 @@
 
     </section>
 
-    <section class="bg-blue-100 px-20 py-20">
+    <section id="skills" class="bg-blue-100 px-20 py-20">
         <h1 class="text-center text-5xl pb-10">Skills</h1>
         <div class="flex flex-col gap-10 px-10 py-5 m-auto text-1xl justify-center">
 
@@ -111,7 +111,7 @@
         </div>
     </section>
 
-    <section class="bg-[url('/images/hero.png')] py-10">
+    <section id="contact" class="bg-[url('/images/hero.png')] py-10">
         <form class="grid grid-cols-3 p-10 z-10">
             <div class="col-start-2 col-span-1 p-16 rounded-lg shadow-lg bg-blue-100">
                 <h1 class="text-center text-5xl pb-5">Contact</h1>
